@@ -28,7 +28,7 @@ jobs:
       run: chmod +x ./gradlew
 
     - name: Build with Gradle Wrapper
-      run: ./gradlew build
+      run: ./gradlew shadowJar
 
     - run: mkdir staging && cp build/libs/*.jar staging
     - uses: actions/upload-artifact@v3
