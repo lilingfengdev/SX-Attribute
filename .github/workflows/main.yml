@@ -30,7 +30,7 @@ jobs:
     - name: Build with Gradle Wrapper
       run: ./gradlew shadowJar
 
-    - run: mkdir staging && cp build/out/*.jar staging
+    - run: mkdir staging && cp build/libs/*.jar staging
     - uses: actions/upload-artifact@v3
       with:
           name: Package
